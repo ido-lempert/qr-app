@@ -1,1 +1,8 @@
-<qr-app-nx-welcome></qr-app-nx-welcome>
+<form *ngIf="!qrUrl; else elseBlock">
+    <textarea class="form-control" #t placeholder="https://domain.com"></textarea>
+    <button class="btn btn-primary" type="button" (click)="generate(t)">Generate</button>
+</form>
+<ng-template #elseBlock>
+    <img class="img" [src]="qrUrl" alt="qr code">
+    <button class="btn btn-close" (click)="qrUrl = ''"></button>
+</ng-template>

@@ -1,0 +1,41 @@
+:host{
+  display: block;
+}
+
+@media only screen and (min-width: 599px) {
+  :host{
+    width: 600px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 0;
+    margin-left: -25%;
+  }
+}
+
+form{
+  padding: 10px;
+  width: 100%;
+}
+
+textarea{
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 10px;
+}
+
+img{
+  width: 100%;
+}
+
+.btn-primary{
+  display: block;
+}
+
+.btn-close{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
