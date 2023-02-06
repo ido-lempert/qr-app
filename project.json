@@ -11,6 +11,7 @@
         "{options.outputPath}"
       ],
       "options": {
+        "allowedCommonJsDependencies": ["qrcode"],
         "outputPath": "dist/qr-app",
         "index": "./src/index.html",
         "main": "./src/main.ts",
