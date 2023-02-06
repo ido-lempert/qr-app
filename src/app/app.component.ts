@@ -10,14 +10,15 @@ import {Subscription} from "rxjs";
 })
 export class AppComponent implements OnDestroy{
   qrUrl?: string;
+  qrDownloadUrl?: string;
+
   private pwaServiceSubscriber?: Subscription;
 
   constructor(private pwaService: PwaService) {
   }
 
   async generate(el: HTMLTextAreaElement){
-    const url = await QRCode.toDataURL(el.value, {width: 600});
-    this.qrUrl = url;
+    this.qrUrl = await QRCode.toDataURL(el.value, {width: 600, margin:0});
     el.value = '';
 
     this.pwaServiceSubscriber = this.pwaService.prompt.subscribe();
