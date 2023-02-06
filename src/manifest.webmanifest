@@ -4,6 +4,7 @@
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "minimal-ui",
+  "description": "QR code generator application. Share the QR image or copy to clipboard",
   "screenshots" : [
     {
       "src": "assets/screenshots/1.png",
@@ -20,7 +21,7 @@
   ],
   "scope": "./",
   "start_url": "./",
-  "description": "QR code generator application. Share the QR image or copy to clipboard",
+
   "icons": [
     {
     "src": "assets/icons/48x48.png",
