@@ -52,7 +52,7 @@ export class AppComponent implements OnInit, OnDestroy{
   ngOnInit(): void {
     // If your project used Angular Router - You should use RouterActivated instead of thw following code
     const parsedUrl = new URL(window.location.toString());
-    const url = parsedUrl.searchParams.get('url');
+    const url = parsedUrl.searchParams.get('link') || parsedUrl.searchParams.get('description');
 
     if (url) {
       QRCode.toDataURL(url, qrOptions).then(qrUrl => this.qrUrl = qrUrl);
