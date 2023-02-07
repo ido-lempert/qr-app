@@ -2,6 +2,7 @@
     <div class="row justify-content-md-center align-items-center text-center">
         <ng-template [ngIf]="!qrUrl" [ngIfElse]="elseBlock">
             <div class="col-md-6">
+                <!-- Input - free text -->
                 <form action="">
                     <textarea class="form-control mb-2" #t placeholder="https://domain.com"></textarea>
                     <button class="btn btn-primary" type="button" (click)="generate(t)">Generate</button>
@@ -10,6 +11,7 @@
         </ng-template>
         <ng-template #elseBlock>
             <div class="col-md-5">
+                <!-- Output - Qr code image and download link -->
                 <button class="btn btn-close mb-2" (click)="qrUrl = ''"></button>
                 <img class="img img-fluid mb-2" [src]="qrUrl" alt="qr code">
                 <a class="link-primary" [href]="qrUrl" download="qr.png">Download</a>

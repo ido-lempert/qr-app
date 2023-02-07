@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {fromEvent, ReplaySubject, map, Subject, pipe, tap, take, mergeMap, Observable} from "rxjs";
+import {fromEvent, ReplaySubject, take, mergeMap, Observable} from "rxjs";
 import {fromPromise} from "rxjs/internal/observable/innerFrom";
 
 interface BeforeInstallPrompt extends Event{
@@ -11,10 +11,6 @@ interface BeforeInstallPrompt extends Event{
 })
 export class PwaService {
   private beforeInstallPrompt = new ReplaySubject<BeforeInstallPrompt>(1);
-
-  constructor() {
-
-  }
 
   init(){
     fromEvent<BeforeInstallPrompt>(window, 'beforeinstallprompt')
